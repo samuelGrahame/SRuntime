@@ -7,9 +7,9 @@ namespace SRuntime
 {
     public unsafe struct Function
     {
-        public fixed int ConstData[255];
+        public fixed int ConstData[256];
         public fixed byte Data[65535];        
-        fixed int registor[255];
+        fixed int registor[256];
 
         public unsafe int Run()
         {
@@ -50,7 +50,7 @@ namespace SRuntime
                         case 8: // SKIP FALSE
                             if (registor[Data[++index]] != 0)
                             {
-                                index++;
+                                index+=Data[++index];
                             }
                             break;
                         default:

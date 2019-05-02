@@ -17,9 +17,10 @@ namespace SRuntime
 
             ushort length = data[index++];
             for (i = 0; i < length; i++)
-                app.ConstData[i] = data[index++];
+                app.ConstData[i] = BitConverter.ToInt32(new byte[] { data[index++], data[index++], data[index++], data[index++] });
 
-            length = (ushort)(data[index++] + (data[index++] << 8));
+            length = BitConverter.ToUInt16(new byte[] { data[index++], data[index++] });
+
             for (i = 0; i < length; i++)
                 app.Data[i] = data[index++];
 
