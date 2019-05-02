@@ -8,8 +8,7 @@ namespace SRuntimeAssembler
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("Hello World!");
+            Compile(@"C:\Users\samuel grahame\Source\Repos\SRuntime\SRuntimeAssembler\Idea.txt", @"C:\Users\samuel grahame\Source\Repos\SRuntime\SRuntimeAssembler\program.data");
         }
 
         unsafe static void Compile(string source, string destination)
