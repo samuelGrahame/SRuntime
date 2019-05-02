@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SRuntime", "SRuntime\SRuntime.csproj", "{900C5687-C844-4B91-9D6C-0E1CBA6581DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{900C5687-C844-4B91-9D6C-0E1CBA6581DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{900C5687-C844-4B91-9D6C-0E1CBA6581DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{900C5687-C844-4B91-9D6C-0E1CBA6581DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{900C5687-C844-4B91-9D6C-0E1CBA6581DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D9BE84F-39C2-4201-B31E-149DE6C805DA}
+	EndGlobalSection
+EndGlobal
