@@ -48,7 +48,7 @@ namespace SRuntime
 
             st.Stop();
 
-            Console.WriteLine($"Total Time {st.ElapsedTicks * 100.0f}ns - Avg Time {(st.ElapsedTicks * 100.0f) / intervals}ns");
+            Console.WriteLine("Total Time " + (st.ElapsedTicks * 100.0f) + "ns - Avg Time " + ((st.ElapsedTicks * 100.0f) / intervals) + "ns");
         }
     }
 }
