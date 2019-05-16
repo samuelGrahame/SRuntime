@@ -127,7 +127,7 @@ namespace SRuntimeAssembler
             {
                 if(app.ConstData[i] != 0)
                 {
-                    length = 255 - i;
+                    length = i + 1;
                     bytes.Add((byte)(length));
                     break;
                 }
@@ -141,7 +141,7 @@ namespace SRuntimeAssembler
             {
                 if (app.Data[i] != 0)
                 {
-                    length = 65535 - i;
+                    length = i + 1;
                     bytes.AddRange( BitConverter.GetBytes((ushort)(length)));
                     break;
                 }
