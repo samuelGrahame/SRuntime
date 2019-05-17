@@ -1,7 +1,17 @@
 ﻿const 1
-const 2
+const 1000
 
 set 0 0
 set 1 1
-add 2 0 1
+
+add 2 2 0
+print 2
+
+equal 3 2 1
+
+skip.false 3
+back 4
+
+print 2
+
 ret 2

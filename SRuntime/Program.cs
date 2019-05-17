@@ -6,11 +6,11 @@ namespace SRuntime
     unsafe class Program
     {
         static int Main(string[] args)
-        {            
+        {
             if (args == null || args.Length == 0)
                 return 0;
 
-            //args = new string[] { @"C:\Users\samuel grahame\Desktop\program.data" };
+            //args = new string[] { @"C:\Users\Samuel\Source\Repos\SRuntime\SRuntimeAssembler\program.data" };
 
             Function app;
 
@@ -27,14 +27,18 @@ namespace SRuntime
             for (i = 0; i < length; i++)
                 app.Data[i] = data[index++];
 
-            Test(10, ref app);
-            Test(100, ref app);
-            Test(1000, ref app);
-            Test(10000, ref app);
+            //Test(10, ref app);
+            //Test(100, ref app);
+            //Test(1000, ref app);
+            //Test(10000, ref app);
+
+            //Console.ReadKey();
+
+            var x = app.Run();
 
             Console.ReadKey();
 
-            return 0;
+            return x;
         }
 
         static void Test(int intervals, ref Function func)

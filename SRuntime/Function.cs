@@ -11,6 +11,8 @@ namespace SRuntime
         public fixed byte Data[65535];        
         fixed int registor[256];
 
+        static TextWriter textWriter = Console.Out;
+
         public unsafe int Run()
         {
             int index = 0;
@@ -47,13 +49,17 @@ namespace SRuntime
                             break;
                         case 7: // RETURN
                             return registor[Data[++index]];
-                        case 8: // SKIP FALSE
-                            if (registor[Data[++index]] != 0)
-                            {
-                                index+=Data[++index];
-                            }
+                        case 8: // SKIP FALSE                            
+                            _ = (registor[Data[++index]] == 0 ? 
+                                index : 
+                                (index += Data[++index])) == index++;
+                            
                             break;
-                        default:
+                        case 9: // ECHO
+                            textWriter.WriteLine(registor[Data[++index]]);
+                            break;
+                        case 10: // EQUAL
+                            registor[Data[++index]] = registor[Data[++index]] == registor[Data[++index]] ? 1 : 0;
                             break;
                     }
                 } while (index++ < 65535);
