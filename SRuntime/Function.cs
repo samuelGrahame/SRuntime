@@ -49,10 +49,12 @@ namespace SRuntime
                             break;
                         case 7: // RETURN
                             return registor[Data[++index]];
-                        case 8: // SKIP FALSE                            
-                            _ = (registor[Data[++index]] == 0 ? 
-                                index : 
-                                (index += Data[++index])) == index++;
+                        case 8: // SKIP FALSE      
+                            if(registor[Data[++index]] != 0)
+                            {                             
+                                index = Data[++index] + index;
+                            }
+                            index++;                            
                             
                             break;
                         case 9: // ECHO
